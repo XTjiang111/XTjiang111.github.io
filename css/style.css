@@ -356,6 +356,12 @@ a:hover {
     color: #4b5563;
 }
 
+.advisor {
+    font-size: 0.8rem !important;
+    color: #6b7280 !important;
+    margin-top: 2px;
+}
+
 /* --- Footer --- */
 .footer {
     background: #1a1a2e;
