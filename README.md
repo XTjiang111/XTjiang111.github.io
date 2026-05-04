@@ -1,4 +1,4 @@
-# Zhengyi Lyu — Academic Homepage
+# JIANG Xiantao — Academic Homepage
 
 Personal academic website hosted on GitHub Pages.
 
