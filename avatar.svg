@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#0f2b4a"/>
+      <stop offset="100%" stop-color="#0d1f3c"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a6b8a"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#0f2b4a"/>
+    </linearGradient>
+    <linearGradient id="visor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="30%" stop-color="#0ea5e9"/>
+      <stop offset="70%" stop-color="#1a6b8a"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowFilter">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="circle">
+      <circle cx="100" cy="100" r="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="url(#ring)" stroke-width="3" opacity="0.6"/>
+  <circle cx="100" cy="100" r="94" fill="url(#bg)"/>
+
+  <g clip-path="url(#circle)">
+
+    <!-- Glow -->
+    <circle cx="100" cy="100" r="96" fill="url(#glow)"/>
+
+    <!-- Bioluminescent particles -->
+    <circle cx="42" cy="55" r="1.5" fill="#2dd4bf" opacity="0.6" filter="url(#glowFilter)"/>
+    <circle cx="155" cy="48" r="1" fill="#0ea5e9" opacity="0.5" filter="url(#glowFilter)"/>
+    <circle cx="160" cy="135" r="1.2" fill="#2dd4bf" opacity="0.4" filter="url(#glowFilter)"/>
+    <circle cx="35" cy="140" r="1.8" fill="#38bdf8" opacity="0.5" filter="url(#glowFilter)"/>
+    <circle cx="65" cy="160" r="1" fill="#2dd4bf" opacity="0.3"/>
+    <circle cx="148" cy="72" r="0.8" fill="#38bdf8" opacity="0.4"/>
+    <circle cx="50" cy="95" r="1" fill="#2dd4bf" opacity="0.35"/>
+    <circle cx="145" cy="155" r="1.3" fill="#0ea5e9" opacity="0.4" filter="url(#glowFilter)"/>
+
+    <!-- Shoulders / diving suit -->
+    <ellipse cx="100" cy="175" rx="70" ry="30" fill="url(#suit)"/>
+    <path d="M55 160 Q70 155 85 162 Q100 168 115 162 Q130 155 145 160" fill="none" stroke="#1a6b8a" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Neck ring -->
+    <ellipse cx="100" cy="125" rx="32" ry="6" fill="#1a3a5c" stroke="#2dd4bf" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Helmet body -->
+    <path d="M68 125 Q68 70 100 60 Q132 70 132 125" fill="url(#suit)" stroke="#1a6b8a" stroke-width="1.5"/>
+
+    <!-- Visor -->
+    <path d="M75 100 Q75 80 100 76 Q125 80 125 100 Q125 118 100 120 Q75 118 75 100Z" fill="url(#visor)" opacity="0.85"/>
+
+    <!-- Visor reflection -->
+    <path d="M82 92 Q88 84 98 83 Q90 88 85 97Z" fill="#fff" opacity="0.15"/>
+    <path d="M105 108 Q112 104 118 107 Q112 112 105 110Z" fill="#fff" opacity="0.1"/>
+
+    <!-- Helmet light -->
+    <circle cx="100" cy="68" r="4" fill="#2dd4bf" opacity="0.8" filter="url(#glowFilter)"/>
+    <circle cx="100" cy="68" r="2" fill="#fff" opacity="0.6"/>
+
+    <!-- Breathing tube details -->
+    <path d="M125 118 Q135 120 138 125" fill="none" stroke="#2dd4bf" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Subtle sonar rings -->
+    <circle cx="100" cy="100" r="45" fill="none" stroke="#2dd4bf" stroke-width="0.5" opacity="0.15"/>
+    <circle cx="100" cy="100" r="65" fill="none" stroke="#2dd4bf" stroke-width="0.5" opacity="0.1"/>
+
+  </g>
+
+  <!-- Inner ring glow -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#2dd4bf" stroke-width="0.5" opacity="0.3"/>
+
+</svg>
