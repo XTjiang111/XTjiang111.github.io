@@ -2,7 +2,7 @@
 
 Personal academic website hosted on GitHub Pages.
 
-**URL:** https://jimmyzly007.github.io
+**URL:** https://XTjiang111.github.io
 
 ## Structure
 
@@ -52,5 +52,5 @@ npx serve .
 
 ## Deployment
 
-Push to the `main` branch of `jimmyzly007/jimmyzly007.github.io`.
+Push to the `main` branch of `XTjiang111/XTjiang111.github.io`.
 GitHub Pages will automatically deploy from the `main` branch.
