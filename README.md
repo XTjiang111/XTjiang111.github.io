@@ -15,18 +15,6 @@ Personal academic website hosted on GitHub Pages.
 
 ## Update Guide
 
-### Quick steps
-
-```bash
-cd "d:\A_Work\008-研究生论文\000-2026论文修改\Patent\jimmyzly007.github.io"
-
-git add .
-git commit -m "描述本次更新内容"
-git push
-```
-
-Push 后约 1-2 分钟，刷新 https://jimmyzly007.github.io 生效。
-
 ### Common edits
 
 | Task | Where to edit |
