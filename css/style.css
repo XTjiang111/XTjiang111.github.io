@@ -1,6 +1,6 @@
 /* ============================================
    JIANG Xiantao — Academic Homepage
-   European/American Academic Style
+   Ocean Theme
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -17,14 +17,14 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: #1a1a2e;
-    background: #fafafa;
+    color: #0f172a;
+    background: #f0f9ff;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-    background: #1a1a2e;
+    background: #0c4a6e;
     color: #fff;
 }
 
@@ -36,18 +36,18 @@ h1, h2, h3, h4 {
     letter-spacing: -0.01em;
 }
 
-h1 { font-size: 2.75rem; }
+h1 { font-size: 2.75rem; color: #0a1628; }
 h2 { font-size: 1.85rem; }
 h3 { font-size: 1.25rem; }
 
 a {
-    color: #2563eb;
+    color: #0c4a6e;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: #1e40af;
+    color: #0d9488;
 }
 
 /* --- Layout --- */
@@ -62,7 +62,7 @@ a:hover {
 }
 
 .alt-bg {
-    background: #fff;
+    background: #ffffff;
 }
 
 /* --- Navigation --- */
@@ -71,10 +71,10 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(250, 250, 250, 0.92);
+    background: rgba(10, 22, 40, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.15);
     z-index: 100;
 }
 
@@ -89,7 +89,11 @@ a:hover {
     font-family: 'Source Serif 4', serif;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1a1a2e;
+    color: #e2e8f0;
+}
+
+.nav-brand:hover {
+    color: #2dd4bf;
 }
 
 .nav-links {
@@ -100,20 +104,34 @@ a:hover {
 
 .nav-links a {
     font-size: 0.875rem;
-    color: #4b5563;
+    color: #94a3b8;
     font-weight: 400;
     letter-spacing: 0.02em;
     text-transform: uppercase;
 }
 
 .nav-links a:hover {
-    color: #1a1a2e;
+    color: #2dd4bf;
 }
 
 /* --- Hero --- */
 .hero {
     padding-top: 136px;
     padding-bottom: 72px;
+    background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23ffffff' d='M0,30 C240,0 480,60 720,30 C960,0 1200,60 1440,30 L1440,60 L0,60Z'/%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
 }
 
 .hero-grid {
@@ -121,6 +139,8 @@ a:hover {
     grid-template-columns: 1fr 160px;
     gap: 48px;
     align-items: start;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text h1 {
@@ -129,45 +149,46 @@ a:hover {
 
 .subtitle {
     font-size: 1.1rem;
-    color: #4b5563;
+    color: #0d9488;
+    font-weight: 500;
     margin-bottom: 2px;
 }
 
 .affiliation {
     font-size: 0.95rem;
-    color: #6b7280;
+    color: #64748b;
 }
 
 .affiliation-desc {
     margin-top: 16px;
     font-size: 0.95rem;
-    color: #4b5563;
+    color: #475569;
     max-width: 540px;
 }
 
 .hero-contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 12px;
     margin-top: 24px;
 }
 
 .contact-link {
     font-size: 0.85rem;
-    color: #4b5563;
+    color: #475569;
     display: inline-flex;
     align-items: center;
     gap: 6px;
     padding: 6px 14px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #cbd5e1;
     border-radius: 8px;
     transition: all 0.2s;
 }
 
 .contact-link:hover {
-    color: #1a1a2e;
-    border-color: #1a1a2e;
-    background: #f3f4f6;
+    color: #0d9488;
+    border-color: #0d9488;
+    background: #f0fdfa;
 }
 
 /* --- Avatar --- */
@@ -181,7 +202,8 @@ a:hover {
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 8px 32px rgba(13, 31, 60, 0.25);
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.2);
+    border: 3px solid rgba(45, 212, 191, 0.3);
 }
 
 .hero-avatar {
@@ -193,16 +215,17 @@ a:hover {
     text-align: center;
     margin-bottom: 48px;
     position: relative;
+    color: #0a1628;
 }
 
 .sec-title::after {
     content: '';
     display: block;
-    width: 48px;
-    height: 3px;
-    background: #2563eb;
+    width: 64px;
+    height: 4px;
     margin: 12px auto 0;
     border-radius: 2px;
+    background: linear-gradient(90deg, #0c4a6e, #0d9488, #2dd4bf);
 }
 
 /* --- Research Cards --- */
@@ -213,21 +236,22 @@ a:hover {
 }
 
 .research-card {
-    background: #fafafa;
+    background: #f0f9ff;
     padding: 32px 24px;
     border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #bae6fd;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .research-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(13, 148, 136, 0.1);
+    border-color: #0d9488;
 }
 
 .card-icon {
     font-size: 1.5rem;
-    color: #2563eb;
+    color: #0d9488;
     margin-bottom: 12px;
 }
 
@@ -236,20 +260,21 @@ a:hover {
     font-weight: 600;
     margin-bottom: 8px;
     font-size: 1rem;
+    color: #0a1628;
 }
 
 .research-card p {
     font-size: 0.875rem;
-    color: #4b5563;
+    color: #475569;
 }
 
 /* --- Publications --- */
 .pub-item {
     display: flex;
     gap: 16px;
-    margin-bottom: 32px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .pub-item:last-of-type {
@@ -259,7 +284,7 @@ a:hover {
 .pub-num {
     font-family: 'Source Serif 4', serif;
     font-size: 1rem;
-    color: #2563eb;
+    color: #0d9488;
     font-weight: 600;
     min-width: 28px;
 }
@@ -269,17 +294,18 @@ a:hover {
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 4px;
+    color: #0a1628;
 }
 
 .pub-authors {
     font-size: 0.875rem;
-    color: #4b5563;
+    color: #475569;
     margin-bottom: 2px;
 }
 
 .pub-venue {
     font-size: 0.85rem;
-    color: #6b7280;
+    color: #64748b;
     font-style: italic;
     margin-bottom: 8px;
 }
@@ -288,8 +314,9 @@ a:hover {
     display: inline-block;
     font-size: 0.7rem;
     font-weight: 500;
-    color: #2563eb;
-    background: #eff6ff;
+    color: #0f766e;
+    background: #f0fdfa;
+    border: 1px solid #99f6e4;
     padding: 1px 8px;
     border-radius: 4px;
     margin-left: 6px;
@@ -303,14 +330,14 @@ a:hover {
 
 .pub-links a {
     font-size: 0.8rem;
-    color: #2563eb;
+    color: #0c4a6e;
     display: inline-flex;
     align-items: center;
     gap: 4px;
 }
 
 .pub-links a:hover {
-    color: #1e40af;
+    color: #0d9488;
 }
 
 .pub-full {
@@ -328,7 +355,7 @@ a:hover {
     gap: 24px;
     margin-bottom: 28px;
     padding-bottom: 28px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .teaching-item:last-child {
@@ -338,7 +365,7 @@ a:hover {
 .teaching-term {
     font-family: 'Source Serif 4', serif;
     font-weight: 700;
-    color: #2563eb;
+    color: #0d9488;
     min-width: 56px;
     font-size: 1rem;
 }
@@ -348,25 +375,26 @@ a:hover {
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 4px;
+    color: #0a1628;
 }
 
 .teaching-detail p {
     font-size: 0.875rem;
-    color: #4b5563;
+    color: #475569;
 }
 
 .advisor {
     font-size: 0.8rem !important;
-    color: #6b7280 !important;
+    color: #64748b !important;
     margin-top: 2px;
 }
 
 /* --- Footer --- */
 .footer {
-    background: #1a1a2e;
-    color: #9ca3af;
+    background: linear-gradient(180deg, #0a1628, #0f2b4a);
+    color: #94a3b8;
     text-align: center;
-    padding: 32px 0;
+    padding: 40px 0;
     font-size: 0.825rem;
 }
 
@@ -375,7 +403,7 @@ a:hover {
 }
 
 .footer .fa-heart {
-    color: #ef4444;
+    color: #0d9488;
 }
 
 /* --- Responsive --- */
